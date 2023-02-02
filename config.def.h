@@ -21,7 +21,7 @@ static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, "#a9b1d6",  "#a9b1d6"  },
+	[SchemeSel]  = { col_gray4, "#565f89",  "#565f89"  },
 };
 static const unsigned int alphas[][3]      = {
        /*               fg      bg        border     */
@@ -54,8 +54,8 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "",      tile },    /* first entry is default */
-	{ "",      NULL },    /* no layout function means floating behavior */
-	{ "󰍉",      monocle },
+	{ "󰁌",      NULL },    /* no layout function means floating behavior */
+	{ "󱡴",      monocle },
 };
 
 /* key definitions */
