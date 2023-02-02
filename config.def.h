@@ -9,7 +9,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 2;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "Inter:style=Regular:size=11", "SymbolsNerdFont:weight=bold:size=14" };
+static const char *fonts[]          = { "Misc Tamsyn:style=Regular:size=11", "SymbolsNerdFont:weight=bold:size=16" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -21,7 +21,7 @@ static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, "#7045a1",  "#7349a5"  },
+	[SchemeSel]  = { col_gray4, "#a9b1d6",  "#a9b1d6"  },
 };
 static const unsigned int alphas[][3]      = {
        /*               fg      bg        border     */
@@ -53,9 +53,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	{ "󰍉",      monocle },
 };
 
 /* key definitions */
@@ -76,12 +76,14 @@ static const char *termcmd[]  = { "alacritty", NULL };
 /* custom commands */
 static const char *rofi[] =  { "rofi", "-show", "drun", "-show-emojis", NULL  };
 static const char *flamecmd[] = { "flameshot", "gui", NULL };
+static const char *browsercmd[] = { "google-chrome", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Print,  spawn,          {.v = flamecmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofi } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
