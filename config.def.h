@@ -79,7 +79,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 /* custom commands */
 static const char *rofi[] =  { "rofi", "-show", "drun", "-show-emojis", NULL  };
 static const char *flamecmd[] = { "flameshot", "gui", NULL };
-static const char *browsercmd[] = { "google-chrome", NULL };
+static const char *browsercmd[] = { "brave", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
